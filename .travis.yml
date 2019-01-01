@@ -1,26 +1,20 @@
 sudo: required
 addons:
   chrome: stable
-
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - npm install -g @angular/cli
-  - npm run v
-
+- npm install -g @angular/cli
+- npm run v
 script:
-  - ng build --prod --aot
-  - npm start
-  
+- ng build --prod --aot
 deploy:
-  provider: heroku
-  app:
-    master: plant-io
-  api_key:
-    secure: Tb2gYGCLiwAuJPiIlyE9HpvMjt3qyYuE1wDcBMzhQAv+HH2MBWIy8cBGNRteWBetcCUxOzFPGwEk1ImEt/zE7TVvu7vEb2hc93LeysceSw2t44+WNDoZRiPX04vvbjE1BH3TwPOcnXZLHkvI+fZ1DtsNw0Xe7EiKnPhixFPrswTByVc5jetVXAMHIHKsBMnQUJFunXKqF7ouf0EGRN9U6qXB8aCoHgjnjdiO6lWYX4TIzRloj024EOnU8p+DSBHxbSE9hX8C4F6IuZh9mJuVq6SfcdSnFuGQlpxPcNxnyIj+jTR4VkFQfXflqhlHb7EES5VpPxp6oQCCBcXQJn5zg0W57KDHszD9CNtIFuUZvC1TTql50ehC/MJr/lEqkO+D+4li2U6NPlTDn0NBupQOMLdgc4A3pz6mFkJVkomWNm0SuC1ix43ltHfxg/7qPz1YiRlFj+XWPbQuwAzzppyTyHEikXPQl6FwIvJ1xNCM4EjrrSgYwJ0dxrWkJenLoJ3Ww/8wNnWr5ApVttyxNyaFYIWhWRsa8D7u8X7nFccq7TUh6/qkhnf8ciHR37ZcxcxyY3nkwAtdkSk4GM7ZcRksqDsS/H9RHA3jvlbOhNb+RerKnGeXlzM7Ir9t2somXqSPgoxKv76qxYzkK768+xBKRvIeNQLr4Jc04y7s7QDxfMk=
+  provider: s3
+  access_key_id: AKIAJKNF6E5IGB5VT7XA
+  secret_access_key:
+    secure: gk69YUbZSXKhKie68VIKSjzAsImg4ShbFSgmZ1opQX/rBOvGrUXyicGKsNgcSwKrYSWba2WsQWXgM+SaxDzinEGIaHYoQhF7BFv2c2ktTx1xIPhdUNYkGMz4QNt68hXYMyXwJS0sa1JLOi2nZz1UWZwr5opcK7T7ExSTlAcKN67qFe+DHXY3XIPbY/nu1d9BtitMSnTK3+D9K0xfpKMy6tSlXfqAc0uWL7Vw6AghdWBdEDFJyINqfq+74jC+ykrLsTQQhQES/uq1xjHrBiG2SPQnDX/1nnEpsmmee8/Jt4LaqTvj0Pq7FqI5I+fJ4dPDUaA7DdHVCT+ySUG7ccau4j9SsY1ByBwRrxIXZlUjy2n2jTL8prt8JOGmT5A/lhq9sVTxjppBiVOE1ULKmACN2uPG9ucOaOxNLHBf07ELgFVnjm//GHJ2F1oz9lJJ6a3LV3WuUvhsQ8C7MgDfJExrDx7whrPNKSCgJXpadYu1vHp6lZyyG2RzgSMnOHAc55AchDaDgGHzlihAR9vg5xB4rKm+lSAIxZTCQ+avoiZFBMB/jJfjVNDuAIMCZo+u8J2rsin07KmFreGBjDZIgOzR9CqZ76D85Mk7aBE8r5KD6Fyi0YbkYWuXWoVPKMPks622ghD/knvHT+v3fbmaOmi+hufxvy6w/4Rl/jk3D8eX3aM=
+  bucket: app.macbubi.com
