@@ -1,13 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
-  
-  <div *ngFor="let measure of measures" class="measure" style="border:1px solid red">
-    <p>humidity: {{ measure.humidity }}</p>
-    <p>temprature: {{ measure.temprature }}</p>
-    <p>sunlight: {{ measure.sunlight }}</p>
-    <p>humidity: {{ measure.humidity }}</p>
-  </div>
+  <canvas id="chartCanvas" #chartCanvas>{{ chart }}</canvas>
+</div>
