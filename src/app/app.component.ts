@@ -12,6 +12,6 @@ export class AppComponent implements OnInit {
   constructor(private plantService: PlantService) { }
   
   ngOnInit() {
-    this.plantService.getPlantData('','','').subscribe((measures) => this.measures = measures);
+    this.plantService.getPlantData('','','').subscribe((measures: any[]) => this.measures = measures);
   }
 }
