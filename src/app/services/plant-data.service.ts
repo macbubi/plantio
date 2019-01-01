@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import { environment } from "../../environments/environment";
 
 @Injectable()
 export class PlantService {
@@ -14,7 +15,8 @@ export class PlantService {
    * @returns {Observable}
    */
   getPlantData(dateFrom, dateTo, plantId) {
-    return this._http.get("http://localhost:3000/app/plant/getData", {
+    const url = environment.production ? "https://plantio-staging.herokuapp.com/app/plant/getData" : "http://localhost:3000/app/plant/getData";
+    return this._http.get(url, {
       params: {
         plantId: plantId,
         dateFrom: dateFrom,
