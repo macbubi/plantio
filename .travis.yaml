@@ -16,3 +16,10 @@ before_script:
 script:
   - ng build --prod --aot
   - ng test
+  
+deploy:
+  provider: heroku
+  app:
+    staging: plant-io
+  api_key:
+    secure: flu7j1g2HAgxVDP/06YSIIDDZbc6i7VyPULc1lvQ1WMQTUNW/xlxlSbfuA9Q6nwUvbO2f9MjcU7WqgZ/SG8OHqpGqFLqQFy8LMbwDmwPUaaqY1A1rOBGdiHZ7U/Sx6p73OhbReY0BLdnEbXDES93WLUhZh2yDXjeIxZt006Qrsoh6KatTE082QfMSVn6zQ0nMKARLcpf3M/qsfZH/n0LwFIdsT8o9Qgs3dkcmiS0jkMp+fo3l2+aSXELrg1qwP5CRgGdzt/H/ZR7eF1/dYf1bwGX9xcqErlkIN1eJO+a7h7IR2G0eaT31vYsDrTR1rDQTuDvYDljBK8iTIDRnn+aM/px7sOwUZ+3b2XrqI/X4SVHupEo6PsDGbyT9b+8H2OohpZMHwLeaC7Y/I1nc5dTuwlfFloUeQxY/ZndVErcNXSjcQSjMJHSxy9uiCLSrymGJvt7UgXUty6HetDlgub66FY5riGCMlsov+cKCblE7Fi3MDEFIOBoA7elNLtNc4IQ9Ej4MwWjwYTJm61l96kwP+zDSK65z5IV/HDz2e6HsyRNM7zVSaaG3IysbcVPk/9vzvNmn+cJ/upX4GmZ9e5cWeez1lq40bi+rJ/TO2xqWfSI58o0dZ9SGQhYCKxR3n1hHG3KCz0FKyUZyo4kBbxCFhVFchWBafeZ9zbFCwLFMi4=
