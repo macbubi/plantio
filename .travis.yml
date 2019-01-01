@@ -16,6 +16,7 @@ before_script:
 
 script:
   - ng build --prod --aot
+  - npm start
   
 deploy:
   provider: heroku
